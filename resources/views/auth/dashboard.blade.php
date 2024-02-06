@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <style>
-    /* Styles for body */
+    
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: #0974e0; /* Background color */
+    background-image: url(https://t4.ftcdn.net/jpg/02/18/89/83/360_F_218898398_wnLuoR9GY4qhLB2tc7o3tSJbQCRfq0xc.jpg); /* Background image */
 }
 
 /* Styles for section */
@@ -21,21 +21,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: #f8f9fa; /* Background color */
+    background-color: rgba(231, 238, 231, 0.983); /* Background color */
 }
 
-/* Styles for card */
-.card-body {
-    background-color: #ffffff; /* Card background color */
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Card shadow */
-    padding: 30px;
+/* Styles for circle image */
+.circle-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff; /* Border color */
+    box-shadow: 0 0 20px rgba(250, 248, 248, 0.1); /* Image shadow */
 }
 
 /* Styles for heading */
-h1, h3 {
-    color: #343a40; /* Heading color */
+h1 {
+    color: #fcfdfe; /* Heading color */
 }
+h3 {
+    color: #fcfdfe; /* Heading color */
+}
+
 
 /* Styles for buttons */
 .btn-primary {
@@ -45,20 +51,20 @@ h1, h3 {
 }
 
 .btn-primary:hover {
-    background-color: #0056b3; /* Button background color on hover */
-    border-color: #0056b3; /* Button border color on hover */
+    background-color: #13beee; /* Button background color on hover */
+    border-color: #09b2ef; /* Button border color on hover */
 }
 
+        
 </style>
 <body>
 
-    <section class="vh-100" style="background-color: rgb(15, 231, 246)">
+    <section class="vh-100" style="background-image: url(https://t4.ftcdn.net/jpg/02/18/89/83/360_F_218898398_wnLuoR9GY4qhLB2tc7o3tSJbQCRfq0xc.jpg)">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card-body p-5 text-center">
                         <div class="profile-picture mb-4">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ4Ef3V9AhuK7JDSifZ_mmPilxTsLpspDOTlJF16CXvQ&s" alt="Profile Picture" class="rounded-circle">
                         </div>
                         <h1 class="mb-3">{{ Auth::user()->name }}</h1>
                         <h3 class="mb-5">{{ Auth::user()->email }}</h3>
